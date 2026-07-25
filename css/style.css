@@ -81,10 +81,9 @@ body{
     width:100%;
     max-width:460px;
 
-   overflow-x:hidden;
-    overflow-y:auto;
+    height:100vh;
 
-    -webkit-overflow-scrolling:touch;
+    overflow:hidden;
 
     background:
 
@@ -101,23 +100,27 @@ body{
 .scene{
 
     position:absolute;
+
     inset:0;
 
+    z-index:10;
+
     display:flex;
-    justify-content:flex-start;
+
+    justify-content:center;
+
     align-items:center;
 
     padding:34px;
 
-    overflow-y:auto;
-    overflow-x:hidden;
-
-    -webkit-overflow-scrolling:touch;
-
     opacity:0;
+
     pointer-events:none;
 
-    transition:opacity .9s ease;
+    transition:
+
+        opacity .9s ease;
+
 }
 
 .scene.active{
@@ -2760,12 +2763,4 @@ animation:pulseComplete 2s infinite;
 
     }
 
-}
-
-.scene::-webkit-scrollbar{
-    display:none;
-}
-
-.scene{
-    scrollbar-width:none;
 }
