@@ -625,21 +625,7 @@ function openChapter(index){
     document.getElementById("chapterStory").textContent =
     chapter.story;
 
-    const list =
-    document.getElementById("chapterMoments");
-
-    list.innerHTML="";
-
-    chapter.moments.forEach(moment=>{
-
-        const li =
-        document.createElement("li");
-
-        li.textContent = moment;
-
-        list.appendChild(li);
-
-    });
+    
 
     showScene("storyDetail");
 
