@@ -101,27 +101,23 @@ body{
 .scene{
 
     position:absolute;
-
     inset:0;
 
-    z-index:10;
-
     display:flex;
-
-    justify-content:center;
-
+    justify-content:flex-start;
     align-items:center;
 
     padding:34px;
 
-    opacity:0;
+    overflow-y:auto;
+    overflow-x:hidden;
 
+    -webkit-overflow-scrolling:touch;
+
+    opacity:0;
     pointer-events:none;
 
-    transition:
-
-        opacity .9s ease;
-
+    transition:opacity .9s ease;
 }
 
 .scene.active{
