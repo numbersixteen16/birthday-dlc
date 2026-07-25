@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/images/icon-512.png">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Birthday DLC</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div id="background"></div>
+
+    <!-- ========================= -->
+    <!-- APP -->
+    <!-- ========================= -->
+
+    <main id="app">
+
+        <!-- ====================================== -->
+        <!-- SONY INTRO -->
+        <!-- ====================================== -->
+
+        <section id="intro" class="scene active">
+
+            <div class="content">
+
+                <h2>Sony Interactive Entertainment</h2>
+
+                <p>Presents</p>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+        <!-- LOADING -->
+        <!-- ====================================== -->
+
+        <section id="loading" class="scene">
+
+            <div class="content">
+
+                <p id="loadingMessage">
+
+                    Loading Birthday DLC...
+
+                </p>
+
+                <div class="loadingBar">
+
+                    <div id="loadingFill"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+        <!-- TITLE -->
+        <!-- ====================================== -->
+
+        <section id="title" class="scene">
+
+            <div class="content">
+
+                <img
+                    src="assets/images/birthday-logo.png"
+                    alt="Birthday DLC Logo"
+                    class="logo reveal">
+
+                <div id="startArea" class="reveal">
+
+                    <button id="startButton">
+
+                        ✕
+
+                    </button>
+
+                    <p>
+
+                        Press ✕ to Begin
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+<!-- MAIN MENU -->
+<!-- ====================================== -->
+
+<section id="mainMenu" class="scene">
+
+    <div class="city-background"></div>
+
+    <div class="content menu-content">
+
+
+        <h1 class="menu-title">
+
+            BIRTHDAY DLC
+
+        </h1>
+
+
+        <p class="menu-subtitle">
+
+            A SPECIAL EDITION FOR MY FAVORITE PLAYER
+
+        </p>
+
+
+
+        <div class="menu-options">
+
+
+            <div class="menu-item">
+                MAIN STORY
+            </div>
+
+
+            <div class="menu-item">
+                ACHIEVEMENTS
+            </div>
+
+
+            <div class="menu-item">
+                GALLERY
+            </div>
+
+
+            <div id="secretButton" class="menu-item locked">
+
+    <span>SECRET</span>
+
+    <small>LOCKED</small>
+
+</div>
+
+
+            <div class="menu-item">
+                CREDITS
+            </div>
+
+
+        </div>
+
+
+
+        <div class="progress-area">
+
+            <p>
+                DLC COMPLETION
+            </p>
+
+
+            <div class="progress-bar">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+
+            <span>
+                0%
+            </span>
+
+            <p id="menuHint">
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- CREDITS -->
+<!-- ====================================== -->
+
+<section id="credits" class="scene">
+
+    <div id="creditsParticles"></div>
+
+    <div class="credits-background"></div>
+
+
+    <div class="credits-container">
+
+
+        <h1 class="credits-title">
+            CREDITS
+        </h1>
+
+
+
+        <div class="credit-intro">
+
+            <p>
+                BIRTHDAY DLC
+            </p>
+
+            <span>
+                A SPECIAL EDITION FOR MY FAVORITE PLAYER
+            </span>
+
+        </div>
+
+
+        <div class="credit-block">
+
+            <p>
+                WRITER
+            </p>
+
+            <h2>
+                Allah Almighty
+            </h2>
+
+        </div>
+
+
+
+        <div class="credit-block">
+
+            <p>
+                CREATOR/DEVELOPER
+            </p>
+
+            <h2>
+                Huzaifa
+            </h2>
+
+        </div>
+
+
+
+        <div class="credit-block">
+
+            <p>
+                SPECIAL THANKS
+            </p>
+
+            <h2>Sarah Almutairi</h2>
+
+            <br>
+
+            <h5><i>
+                The person who makes
+                every adventure better
+            </i></h5>
+
+        </div>
+
+
+
+        <div class="credit-message">
+
+            Made with love and memories.
+
+        </div>
+
+
+
+        <button id="backCredits">
+
+            ✕ RETURN
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+<!-- ====================================== -->
+<!-- STORY CHAPTERS -->
+<!-- ====================================== -->
+
+<section id="storyChapters" class="scene">
+
+
+    <div class="story-background"></div>
+
+
+    <div class="story-container">
+
+
+        <h1 class="story-title">
+            MAIN STORY
+        </h1>
+
+
+        <p class="story-subtitle">
+            SELECT CHAPTER
+        </p>
+
+
+
+        <div class="chapter-list">
+
+    <div class="chapter-item">
+
+        <span>01</span>
+
+        <div class="chapter-info">
+
+            <h3>THE FIRST ENCOUNTER</h3>
+
+            <p>24 AUGUST 2025</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="chapter-item">
+
+        <span>02</span>
+
+        <div class="chapter-info">
+
+            <h3>A NEW CHAPTER BEGINS</h3>
+
+            <p>5 OCTOBER 2025</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="chapter-item">
+
+        <span>03</span>
+
+        <div class="chapter-info">
+
+            <h3>OUR FIRST BIRTHDAY</h3>
+
+            <p>26 JULY 2026</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="chapter-item future">
+
+        <span>04</span>
+
+        <div class="chapter-info">
+
+            <h3>THE NEXT ADVENTURE</h3>
+
+            <p>COMING SOON...</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+        <button id="backStory">
+
+            ✕ BACK
+
+        </button>
+
+
+
+    </div>
+
+
+</section>
+
+<!-- ====================================== -->
+<!-- STORY DETAIL -->
+<!-- ====================================== -->
+
+<section id="storyDetail" class="scene">
+
+    <div class="story-background"></div>
+
+    <div class="story-detail-container">
+
+        <p id="chapterNumber" class="detail-number">
+            CHAPTER 01
+        </p>
+
+        <h1 id="chapterTitle" class="detail-title">
+            THE FIRST ENCOUNTER
+        </h1>
+
+        <p id="chapterDate" class="detail-date">
+            24 AUGUST 2025
+        </p>
+
+        <div class="detail-divider"></div>
+
+        <h2 class="detail-heading">
+            STORY
+        </h2>
+
+        <p id="chapterStory" class="detail-story">
+
+        </p>
+
+        <h2 class="detail-heading">
+            KEY MOMENTS
+        </h2>
+
+        <ul id="chapterMoments" class="detail-moments">
+
+        </ul>
+
+        <button id="backChapter">
+
+            ✕ BACK
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- ACHIEVEMENTS -->
+<!-- ====================================== -->
+
+<section id="achievements" class="scene">
+
+    <div class="achievement-background"></div>
+
+    <div class="achievement-container">
+
+        <h1 class="achievement-title">
+
+            ACHIEVEMENTS
+
+        </h1>
+
+        <p class="achievement-subtitle">
+
+            RELATIONSHIP MILESTONES
+
+        </p>
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+
+                <h3>FIRST MATCH</h3>
+
+                <span>24 AUG 2025</span>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <h3>FIRST CHAT</h3>
+
+                <span>Unlocked</span>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <h3>LATE NIGHT GAMING</h3>
+
+                <span>Unlocked</span>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <h3>OFFICIALLY TOGETHER</h3>
+
+                <span>Unlocked</span>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <h3>EXCHANGE GIFTS</h3>
+
+                <span>Unlocked</span>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <h3>FIRST BIRTHDAY</h3>
+
+                <span>Unlocked</span>
+
+            </div>
+
+            <div class="achievement-card locked">
+
+                <h3>FIRST KISS</h3>
+
+                <span>Locked</span>
+
+            </div>
+
+            <div class="achievement-card locked">
+
+                <h3>MARRIED</h3>
+
+                <span>Locked</span>
+
+            </div>
+
+        </div>
+
+        <button id="openStats">
+
+            PLAYER STATS
+
+        </button>
+
+        <button id="backAchievements">
+
+            ✕ BACK
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ====================================== -->
+<!-- PLAYER STATS -->
+<!-- ====================================== -->
+
+<section id="playerStats" class="scene">
+
+    <div class="popup-bg"></div>
+
+    <div class="stats-popup">
+
+        <h1>PLAYER STATS</h1>
+
+        <div class="stat-row">
+
+            <span>Favorite Duo</span>
+            <strong>Huzaifa </strong>
+
+        </div>
+
+        <div class="stat-row">
+
+            <span>Hours Together</span>
+            <strong>8,064+</strong>
+
+        </div>
+
+        <div class="stat-row">
+
+            <span>Matches Played</span>
+            <strong>Countless</strong>
+
+        </div>
+
+        <div class="stat-row">
+
+            <span>Favorite Game</span>
+            <strong>Uncharted 4</strong>
+
+        </div>
+
+        <div class="stat-row">
+
+            <span>Distance</span>
+            <strong>Thousands of km</strong>
+
+        </div>
+
+        <div class="stat-row">
+
+            <span>Love Level</span>
+            <strong>∞</strong>
+
+        </div>
+
+        <div class="stat-row">
+
+            <span>Status</span>
+            <strong>Taken</strong>
+
+        </div>
+
+        <button id="closeStats">
+
+            ✕ CLOSE
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- GALLERY -->
+<!-- ====================================== -->
+
+<section id="gallery" class="scene">
+
+    <div class="gallery-background"></div>
+
+    <div class="gallery-container">
+
+        <h1 class="gallery-title">
+            GALLERY
+        </h1>
+
+        <p class="gallery-subtitle">
+            SAVED MEMORIES
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="assets/images/gallery1.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/images/gallery2.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/images/gallery3.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/images/gallery4.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/images/gallery5.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/images/gallery6.jpg" alt="">
+            </div>
+
+        </div>
+
+        <button id="backGallery">
+
+            ✕ BACK
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- GALLERY VIEWER -->
+<!-- ====================================== -->
+
+<section id="galleryViewer" class="scene">
+
+    <div class="gallery-background"></div>
+
+    <div id="shootingStars"></div>
+
+    <div class="viewer-container">
+
+        <h2 id="viewerTitle">
+
+            FIRST MATCH
+
+        </h2>
+
+        <img
+            id="viewerImage"
+            src=""
+            alt="Gallery Image"
+        >
+
+        <div class="viewer-controls">
+
+            <button id="prevImage">
+
+                ◀ PREV
+
+            </button>
+
+            <button id="nextImage">
+
+                NEXT ▶
+
+            </button>
+
+        </div>
+
+        <button id="closeViewer">
+
+            ✕ CLOSE
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- SECRET INTRO -->
+<!-- ====================================== -->
+
+<section id="secretIntro" class="scene">
+
+    <div class="secret-intro-bg"></div>
+
+    <div class="secret-intro-container">
+
+        <h1>
+
+            ACCESS GRANTED
+
+        </h1>
+
+        <p id="secretLoadingText">
+
+            Preparing Birthday DLC...
+
+        </p>
+
+        <div class="secret-loading-bar">
+
+            <div id="secretLoadingFill"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- SECRET PAGE -->
+<!-- ====================================== -->
+
+<section id="secret" class="scene">
+
+    <div class="secret-background"></div>
+
+    <div id="balloons"></div>
+
+    <div class="secret-container">
+
+        <img
+            src="assets/images/birthday-poster.jpg"
+            alt="Birthday Poster"
+            class="birthday-poster"
+        >
+
+        <div class="secret-buttons">
+
+    <button id="openLetter">
+
+        LETTER
+
+    </button>
+
+    <button id="openGift" class="locked-button">
+
+         UNWRAP YOUR GIFT 🎁
+
+    </button>
+
+    <button id="backSecret">
+
+        ✕ BACK
+
+    </button>
+
+</div>
+
+<!-- LETTER POPUP -->
+
+<div id="letterPopup" class="secret-popup">
+
+    <div class="secret-popup-card">
+
+        <h1>
+
+            A LETTER FOR YOU
+
+        </h1>
+
+        <div class="letter-content">
+
+            <p><strong>Dear Sarah, ❤️</strong></p>
+
+<p>
+Happy Birthday, my love.
+</p>
+
+<p>
+I just wanted to remind you how incredibly grateful I am to have you in my life. Meeting you was one of the best things that has ever happened to me, and every day since then has been brighter because of you.
+</p>
+
+<p>
+Thank you for all the laughs, the late-night games, the endless conversations, and for always being by my side no matter how many miles separate us. You make even the ordinary days feel special.
+</p>
+
+<p>
+My biggest wish is to keep seeing you smile, to make you happy every single day, and to create countless more memories together. You deserve all the happiness, love, success, and beautiful moments this world has to offer.
+</p>
+
+<p>
+I hope this little Birthday DLC brings a smile to your face, because every part of it was made with love, just for you.
+</p>
+
+<p>
+Happy Birthday once again, my beautiful girl. I love you more than words can ever describe, and I can't wait for all the birthdays we'll celebrate together in the future.
+</p>
+
+<p style="margin-top:30px;">
+Forever yours,<br>
+<strong>Huzaifa ❤️</strong>
+</p>
+
+        </div>
+
+        <button id="closeLetter">
+
+            ✕ CLOSE
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- GIFT POPUP -->
+
+<div id="giftPopup" class="secret-popup">
+
+    <div class="secret-popup-card">
+
+        <h1>
+
+            YOUR GIFT
+
+        </h1>
+
+        <div class="letter-content">
+
+            <p style="text-align:center;">
+
+                I hope this small gift brings a smile to your face.
+
+            </p>
+
+            <br>
+
+            <h2 style="text-align:center; letter-spacing:3px;">
+
+                PSN $100 GIFT CARD
+
+            </h2>
+
+            <br>
+
+            <p style="text-align:center;">
+
+                CPDR-JFN9-TJA2
+
+            <p>
+
+            <br>
+
+            <p style="text-align:center;">
+
+                Enjoy your gift ❤️
+
+            </p>
+
+        </div>
+
+        <button id="closeGift">
+
+            ✕ CLOSE
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="dlcComplete" class="scene">
+
+    <div id="completeConfetti"></div>
+    
+    <div class="complete-box">
+
+        <h2 style="text-align:center;">🎉 CONGRATULATIONS 🎉</h2>
+
+        <br>
+
+        <h1 style="text-align:center;">🏆 DLC 100% COMPLETE</h1>
+
+        <br>
+
+        <br>
+
+        <h3 style="text-align:center;">
+
+            ❤️ Thank You For Playing ❤️
+
+        </h3>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+    <!-- Javascript -->
+
+    <script src="js/core/app.js"></script>
+
+</body>
+
+</html>

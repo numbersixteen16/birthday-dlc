@@ -1,0 +1,15 @@
+{
+  "name": "Birthday DLC",
+  "short_name": "Birthday DLC",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#04060f",
+  "theme_color": "#2f80ff",
+  "icons": [
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

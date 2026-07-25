@@ -1,0 +1,114 @@
+/* =========================================
+   Floating Logo
+========================================= */
+
+@keyframes floatLogo {
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.logo{
+
+    animation:floatLogo 6s ease-in-out infinite;
+
+}
+
+/* =========================================
+   Breathing Button
+========================================= */
+
+@keyframes breathe {
+
+    0%{
+
+        box-shadow:
+        0 0 18px rgba(47,128,255,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 40px rgba(47,128,255,.65);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 18px rgba(47,128,255,.25);
+
+    }
+
+}
+
+#startButton{
+
+    animation:breathe 2.8s ease-in-out infinite;
+
+}
+
+/* =========================================
+   Sony Intro
+========================================= */
+
+@keyframes introFade {
+
+    0%{
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+    }
+
+}
+
+#intro .content{
+
+    animation:introFade 5s ease forwards;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-40%;
+
+    }
+
+    to{
+
+        left:140%;
+
+    }
+
+}
