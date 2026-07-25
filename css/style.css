@@ -31,7 +31,7 @@ body{
 
     
 
-    overflow-x:hidden;
+    overflow:hidden;
 
     font-family:'Inter',sans-serif;
 
@@ -1513,7 +1513,7 @@ to{
 
 .achievement-title{
 
-    font-size:42px;
+    font-size:32px;
 
     font-weight:900;
 
@@ -1816,7 +1816,7 @@ to{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:18px;
 
@@ -2189,6 +2189,12 @@ to{
 
     max-width:500px;
 
+    height:100%;
+
+    margin-top: -100px;
+
+    max-height:500px;
+
     border-radius:18px;
 
     box-shadow:
@@ -2205,7 +2211,7 @@ to{
 
     flex-direction:column;
 
-    gap:14px;
+    gap:10px;
 
     margin-top:24px;
 
@@ -2360,7 +2366,7 @@ to{
 
     margin:25px 0;
 
-    max-height:380px;
+    max-height:300px;
 
     overflow:auto;
 
@@ -2595,171 +2601,6 @@ animation:pulseComplete 2s infinite;
         transform:
         translateY(110vh)
         rotate(720deg);
-
-    }
-
-}
-
-/* ==========================================================
-   MOBILE RESPONSIVE
-   (Does NOT affect desktop)
-========================================================== */
-
-@media screen and (max-width:768px){
-
-    *{
-        box-sizing:border-box;
-    }
-
-    html,
-    body{
-        width:100%;
-        overflow-x:hidden;
-    }
-
-    .scene{
-
-        width:100%;
-        height:100vh;
-
-        overflow-y:auto;
-        overflow-x:hidden;
-
-        padding:25px 18px;
-
-        justify-content:flex-start;
-
-        align-items:center;
-
-    }
-
-    /* ---------- Titles ---------- */
-
-    h1{
-        font-size:34px !important;
-        text-align:center;
-    }
-
-    h2{
-        font-size:24px !important;
-        text-align:center;
-    }
-
-    p,
-    li,
-    span,
-    strong{
-
-        font-size:16px;
-
-        line-height:1.7;
-
-        word-break:break-word;
-
-        overflow-wrap:anywhere;
-
-    }
-
-    /* ---------- Every container ---------- */
-
-    .story-container,
-    .chapter-container,
-    .achievement-container,
-    .gallery-container,
-    .secret-container,
-    .credits-container,
-    .stats-popup,
-    .viewer-container{
-
-        width:100% !important;
-        max-width:100% !important;
-
-        margin:auto;
-
-    }
-
-    /* ---------- Images ---------- */
-
-    img{
-
-        max-width:100%;
-
-        height:auto;
-
-        display:block;
-
-    }
-
-    .birthday-poster{
-
-        width:100%;
-
-        max-width:420px;
-
-        margin:auto;
-
-    }
-
-    /* ---------- Gallery ---------- */
-
-    .gallery-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:14px;
-
-    }
-
-    /* ---------- Buttons ---------- */
-
-    button{
-
-        max-width:320px;
-
-    }
-
-    /* Floating Back Buttons */
-
-    #backStory,
-    #backChapter,
-    #backAchievements,
-    #backGallery,
-    #backSecret,
-    #backCredits{
-
-        position:fixed;
-
-        bottom:18px;
-
-        right:18px;
-
-        z-index:99999;
-
-    }
-
-    /* ---------- Popups ---------- */
-
-    .stats-popup{
-
-        width:94% !important;
-
-        max-height:90vh;
-
-        overflow-y:auto;
-
-        padding:24px;
-
-    }
-
-    /* ---------- Viewer ---------- */
-
-    #viewerImage{
-
-        max-width:95vw;
-
-        max-height:60vh;
-
-        object-fit:contain;
 
     }
 
